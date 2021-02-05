@@ -20,6 +20,8 @@ module.exports = {
     {
       files: ['**/__tests__/**'],
       settings: {
+        // DESC add import resolver for jest custom module directories, so eslint does not throw error while importing them.
+        // For this to work, we need to install eslint-import-resolver-jest
         'import/resolver': {
           jest: {
             jestConfigFile: path.join(__dirname, './jest.config.js'),
