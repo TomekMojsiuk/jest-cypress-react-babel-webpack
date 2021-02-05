@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "baseUrl": "./",
+    // DESC include tests paths in our jsconfig
     "paths": {
       "*": ["src/*", "src/shared/*", "test/*"]
     }
