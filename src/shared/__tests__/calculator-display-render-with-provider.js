@@ -1,21 +1,6 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import {render as RTLrender} from 'calculator-test-utils'
-import {ThemeProvider} from 'emotion-theming'
-import {dark} from '../../themes'
+import {render} from '../../../test/calculator-test-utils'
 import CalculatorDisplay from '../calculator-display'
-
-function Wrapper({children}) {
-  return <ThemeProvider theme={dark}>{children}</ThemeProvider>
-}
-
-Wrapper.propTypes = {
-  children: PropTypes.node,
-}
-
-function render(ui, options) {
-  return RTLrender(ui, {wrapper: Wrapper, ...options})
-}
 
 test('renders <CalculatorDisplay /> with custom RTLrender and all providers included in it', () => {
   const {container} = render(<CalculatorDisplay value="0" />)

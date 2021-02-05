@@ -16,5 +16,5 @@ function render(ui, {theme = themes.dark, ...options} = {}) {
 }
 
 export * from '@testing-library/react'
-// override the built-in render with our own
+// DESC override the built-in render with our own in common directory so we can use it anywhere in the project
 export {render}
