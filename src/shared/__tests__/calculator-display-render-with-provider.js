@@ -1,5 +1,8 @@
 import React from 'react'
-import {render} from '../../../test/calculator-test-utils'
+// DESC regular import:
+// import {render} from '../../../test/calculator-test-utils'
+// DESC import after adding 'test' directory to moduleDirectories in jest.config.js:
+import {render} from 'calculator-test-utils'
 import CalculatorDisplay from '../calculator-display'
 
 test('renders <CalculatorDisplay /> with custom RTLrender and all providers included in it', () => {

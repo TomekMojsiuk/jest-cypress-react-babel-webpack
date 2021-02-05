@@ -6,6 +6,10 @@ module.exports = {
     'node_modules',
     path.join(__dirname, 'src'),
     'shared',
+    /*  DESC add everything that lives within a test directory to be able to be imported as if it was a node-module, i.e.:
+    /   import { render } from '../../../test/calculator-test-utils' now ===
+    /   import { render } from 'calculator-test-utils'
+    */
     path.join(__dirname, 'test'),
   ],
   moduleNameMapper: {
