@@ -4,6 +4,7 @@ import {render as rtlRender} from '@testing-library/react'
 import {ThemeProvider} from 'emotion-theming'
 import * as themes from '../src/themes'
 
+// DESC move Wrapper fn into render fn and make {theme} accept different values, i.e. dark/light for testing purposes.
 function render(ui, {theme = themes.dark, ...options} = {}) {
   function Wrapper({children}) {
     return <ThemeProvider theme={theme}>{children}</ThemeProvider>
